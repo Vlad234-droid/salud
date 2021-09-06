@@ -1,0 +1,80 @@
+@import '../../attributes.scss';
+
+.block {
+  position: relative;
+
+  .wrapper {
+    padding: 102px 24px 64px 24px;
+    .plugWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .plug {
+        margin-top: 32px;
+        width: 192px;
+        height: 192px;
+      }
+      .any {
+        text-align: center;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+        letter-spacing: 0.01em;
+        color: #000000;
+        max-width: 600px;
+        width: 80%;
+        margin: 41px auto 0px auto;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .show_more {
+      padding-bottom: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        width: 300px;
+        margin-top: 20px;
+        span {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 728px) {
+  .block {
+    .wrapper {
+      .content {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .block {
+    .wrapper {
+      padding-top: 152px;
+      padding-bottom: 130px;
+      .content {
+        max-width: 1337px;
+        margin: 0 auto;
+        justify-content: flex-start;
+      }
+    }
+  }
+}

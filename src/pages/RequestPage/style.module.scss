@@ -1,0 +1,62 @@
+@import '../../attributes.scss';
+.expired-page {
+  height: 100%;
+  background-color: #fff;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.footer {
+  padding: 48px 27px 22px 27px;
+  display: flex;
+  align-items: center;
+  font-family: $OpenSans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  letter-spacing: -0.02em;
+  color: #4e535c;
+  .copyright {
+    margin-right: auto;
+    display: none;
+  }
+  img {
+    width: 20px;
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 784px) {
+  .expired-page {
+    background: #f5fafd;
+    padding: 0 24px 0 24px;
+  }
+  .wrapper {
+    padding-top: 24px;
+  }
+  .footer {
+    font-size: 16px;
+    line-height: 20px;
+    img {
+      width: 30px;
+    }
+    .copyright {
+      display: block;
+    }
+  }
+}

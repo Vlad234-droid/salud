@@ -1,0 +1,110 @@
+@import '../../../attributes.scss';
+
+.header {
+  z-index: 1302;
+  border: 1px solid #dcdcdc;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  padding: 19px 24px 0px 24px;
+  margin-bottom: 16px;
+  .fix {
+    padding-top: 30px;
+  }
+  .mobCerrar {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #cb1d22;
+    padding: 3px;
+    cursor: pointer;
+  }
+
+  .wrapper__ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+    .block_back {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 10px;
+      cursor: pointer;
+      padding: 5px 5px 0px 5px;
+      h4 {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: -0.01em;
+        text-transform: uppercase;
+        color: #cb1d22;
+        margin-left: 4px;
+        margin-bottom: 2px;
+        margin-top: 0.5px;
+      }
+    }
+  }
+
+  &.desctop {
+    z-index: 10;
+  }
+  .wrapperFlex {
+    display: flex;
+  }
+
+  .results {
+    margin-left: 5px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #1e2533;
+  }
+  .filter {
+    display: flex;
+    align-items: center;
+
+    .filter_text {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.01em;
+      color: #2382da;
+      margin-left: 7px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header {
+    padding-top: 53px;
+    min-height: 112px !important;
+    .wrapper__ {
+      max-width: 1340px;
+      margin: 0 auto;
+    }
+    .results {
+      font-size: 40px;
+    }
+    .filter {
+      .filter_text {
+        font-size: 24px;
+      }
+    }
+
+    .filter {
+      position: relative;
+    }
+  }
+}

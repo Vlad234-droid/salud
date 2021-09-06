@@ -1,0 +1,37 @@
+.one_new {
+  list-style: none;
+  width: 100%;
+  background-color: #ffdfaf;
+  margin-bottom: 6px;
+  padding-top: 8px;
+  padding-left: 16px;
+  padding-bottom: 10px;
+
+  h3 {
+    margin: 0;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #0d1422;
+  }
+  .moli {
+    .min {
+      display: inline-block;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 16px;
+      letter-spacing: -0.02em;
+      color: #1e2533;
+    }
+    .max {
+      @extend .min;
+      font-weight: normal;
+      margin-left: 16px;
+    }
+  }
+}

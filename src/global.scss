@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap');
+@import './attributes.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -50%);
+}
+
+#root .MuiButton-containedPrimary {
+  background: #0d1422;
+  border-radius: 4px;
+  border: 0;
+  outline: none;
+  font-family: $Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  height: 48px;
+  padding: 0 24px;
+  box-shadow: none;
+  text-transform: initial;
+  &:hover {
+    background-color: #303643;
+  }
+}
+#root .MuiButton-outlined.MuiButton-outlinedSecondary {
+  background: #f9fbff;
+  border: 2px solid #0d1422;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #1e2533;
+  height: 48px;
+}
+#root .MuiPaper-elevation1 {
+  box-shadow: none !important;
+}
+#root .MuiTouchRipple-root {
+  transition: none !important;
+}
+#root .MuiFormHelperText-root {
+  margin: 0px;
+  position: absolute;
+  top: 55px;
+  left: 5px;
+}
+
+#root .MuiOutlinedInput-root {
+  &.Mui-error {
+    fieldset {
+      border: 2px solid red !important;
+    }
+  }
+  fieldset {
+    border: 1px solid #2382da;
+    transition: border 0.05s ease;
+  }
+  &:hover fieldset {
+    border: 2px solid #2382da;
+  }
+  &.Mui-focused {
+    fieldset {
+      border: 2px solid #2382da;
+    }
+  }
+  &.MuiInputBase-root {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #72767d;
+    margin-left: 5px;
+    width: 100%;
+  }
+}
+
+.MuiOutlinedInput-adornedStart {
+  margin-left: 0px !important;
+}
+
+.MuiDrawer-root.MuiDrawer-modal.drawerFilter.mobile {
+  top: 72px !important;
+  .MuiBackdrop-root {
+    top: 72px !important;
+  }
+}
+.drawerFilter {
+  .MuiDrawer-paperAnchorRight {
+    top: 72px;
+  }
+  &.mobile {
+    .MuiBackdrop-root {
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
+}
+.drawerFilter {
+  .MuiPaper-root.MuiDrawer-paper {
+    height: 100%;
+    & > div {
+      fieldset {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.drawerFilter {
+  &.mobile {
+    .MuiDrawer-paperAnchorRight {
+      width: 100%;
+    }
+  }
+  .MuiDrawer-paperAnchorRight {
+    width: 672px;
+  }
+}
+
+.MuiDrawer-root.MuiDrawer-modal.drawer_cards.mobile {
+  .MuiDrawer-paperAnchorRight {
+    top: 72px;
+    width: 100%;
+  }
+  &.mobile {
+    .MuiBackdrop-root {
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
+}
+
+@media screen and (min-width: 728px) {
+  .drawer_cards {
+    .MuiBackdrop-root {
+      background: rgba(73, 90, 128, 0.25) !important;
+    }
+
+    &.drawerPdfDesctop {
+      .MuiDrawer-paperAnchorRight {
+        width: 100%;
+      }
+    }
+    .MuiDrawer-paperAnchorRight {
+      width: 672px;
+    }
+  }
+}
+@media screen and (min-width: 728px) {
+  .drawerFilter {
+    .MuiDrawer-paperAnchorRight {
+      top: 0px;
+    }
+    .MuiBackdrop-root {
+      background: rgba(73, 90, 128, 0.25) !important;
+    }
+  }
+}

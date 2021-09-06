@@ -1,0 +1,311 @@
+.wrapper {
+  overflow-y: hidden;
+  height: calc(100vh - 72px);
+  position: relative;
+  .pdf {
+    position: fixed;
+    width: 100%;
+    top: 72.4px;
+    background-color: white;
+    height: 100%;
+    padding-bottom: 30px;
+    overflow: auto;
+    .frame {
+      filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.24));
+      border-radius: 4px;
+    }
+  }
+  .scrolling {
+    display: none;
+  }
+  .house_desktop {
+    display: flex !important;
+    align-items: center;
+    margin-left: 26px;
+    margin-top: 9px;
+    margin-bottom: 0px;
+
+    p {
+      margin-top: 12px;
+      padding-left: 10px;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      color: #1e2533;
+    }
+  }
+  .title_block {
+    padding-top: 0px;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+    padding: 10px 0px 2px 24px;
+    .block_back {
+      display: none;
+    }
+    .actions {
+      display: none;
+    }
+    h4 {
+      margin: 0;
+    }
+
+    .panel {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: -0.01em;
+      color: #303643;
+      margin-bottom: 4px;
+      margin-top: 0px;
+    }
+    p {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      color: #1e2533;
+      margin-top: 0px;
+    }
+  }
+  .listNews {
+    scroll-behavior: smooth;
+    position: relative;
+    padding-left: 0px;
+    padding-bottom: 35px;
+    padding: 0px 24px;
+    max-height: 78.5%;
+    overflow-y: auto;
+    margin-top: 0px;
+    ul {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .one_new {
+      list-style: none;
+      width: 100%;
+      margin-bottom: 6px;
+      padding-top: 8px;
+      padding-bottom: 10px;
+      margin-top: 10px;
+      padding-left: 16px;
+      &:last-child {
+        margin-bottom: 69%;
+      }
+      &:nth-child(2) {
+        margin-top: 0px;
+      }
+
+      h3 {
+        margin: 0;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: #0d1422;
+      }
+      .moli {
+        .min {
+          display: inline-block;
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 16px;
+          letter-spacing: -0.02em;
+          color: #1e2533;
+        }
+        .max {
+          @extend .min;
+          font-weight: normal;
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+
+  .button {
+    position: relative;
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    .loaderPDF {
+      position: absolute;
+      top: -15px;
+      left: 39%;
+      svg {
+        width: 80px !important;
+        height: 80px !important;
+        circle {
+          fill: white;
+        }
+      }
+    }
+
+    button {
+      background-color: #0d1422;
+      width: 247px;
+      height: 48px;
+    }
+  }
+  .gradient {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 140px;
+
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%);
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0%, rgba(255, 255, 255, 0)),
+      color-stop(70%, rgba(255, 255, 255, 1))
+    );
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%);
+  }
+}
+@media screen and (max-width: 727px) {
+  .gradient {
+    right: 0px;
+  }
+}
+
+@media screen and (min-width: 728px) {
+  .wrapper {
+    height: 100vh;
+    max-height: 100vh;
+
+    .gradient {
+      height: 120px !important;
+    }
+
+    .pdf {
+      top: 0px;
+      padding-top: 63px;
+    }
+    .house_desktop {
+      margin-left: 40px;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+    .scrolling {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      right: 48px;
+      z-index: 2;
+      bottom: 55px;
+      .dimming {
+        svg {
+          path {
+            fill: #72767d;
+          }
+        }
+        pointer-events: none;
+      }
+      & > div {
+        cursor: pointer;
+        margin-bottom: 5px;
+      }
+    }
+    .listNews {
+      padding-left: 0px !important;
+      padding-right: 118px !important;
+      padding-bottom: 70px !important;
+      margin-top: 0px !important;
+      overflow-y: auto;
+      height: 64%;
+      max-height: 64%;
+
+      .one_new {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+        margin-bottom: 8px !important;
+        padding-left: 40px !important;
+        z-index: 3 !important;
+      }
+    }
+    .title_block {
+      padding: 34px 48px 24px 40px;
+      .block_back {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 10px;
+        cursor: pointer;
+        padding: 5px 5px 0px 5px;
+        h4 {
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 12px;
+          letter-spacing: -0.01em;
+          text-transform: uppercase;
+          color: #cb1d22;
+          margin-left: 4px;
+          margin-bottom: 2px;
+          margin-top: 0.5px;
+        }
+      }
+      .actions {
+        display: flex !important;
+        align-items: center;
+        margin-top: 30px;
+        & > div {
+          &.disabled {
+            pointer-events: none;
+            svg {
+              path {
+                fill: #72767d;
+              }
+            }
+            h3 {
+              color: #72767d;
+            }
+          }
+        }
+        & > div,
+        & > a {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          text-decoration: none;
+          h3 {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px !important;
+            letter-spacing: 0.01em;
+            color: #0d1422;
+            margin-bottom: 2px;
+            margin-left: 5px;
+            padding-right: 26px;
+          }
+        }
+      }
+
+      h3 {
+        margin-top: 0px !important;
+        font-size: 32px !important;
+      }
+      p {
+        font-size: 20px !important;
+        margin-bottom: 0px !important;
+      }
+    }
+  }
+  .button {
+    display: none !important;
+  }
+}

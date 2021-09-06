@@ -1,0 +1,87 @@
+@import '../../attributes.scss';
+.email {
+  margin-bottom: auto;
+  overflow: hidden;
+  background: #ffffff url('../../assets/img/Vector.png') no-repeat center top -1.6vw / 100% auto;
+  padding-top: calc(45vw + 24px);
+  padding-left: 24px;
+  padding-right: 24px;
+
+  form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    max-width: 400px;
+    & > div {
+      width: 100%;
+      & > div {
+        width: 100%;
+      }
+    }
+  }
+
+  .text {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: #4e535c;
+    text-align: center;
+    margin-bottom: 26px;
+    a {
+      color: #2382da;
+      text-decoration: none;
+    }
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    margin-top: 42px;
+    width: 100%;
+
+    button {
+      width: 247px;
+      padding: 0 16px;
+      font-family: $Poppins;
+    }
+  }
+}
+
+@media screen and (min-width: 784px) {
+  .email {
+    width: 736px;
+    box-shadow: 0px 2px 16px #dae4fb;
+    border-radius: 48px 48px 24px 24px;
+    margin: 0 auto;
+    padding-top: 330px;
+    .text {
+      margin-top: 0px;
+      font-size: 24px;
+      width: 80.4%;
+      margin: 2px auto 28px auto;
+      line-height: 32px;
+      font-weight: normal;
+    }
+    form {
+      .MuiFormControl-root.MuiTextField-root {
+        max-width: 523px !important;
+        width: 100% !important;
+      }
+    }
+    .button {
+      button {
+        width: 413px;
+        height: 68px !important;
+        font-size: 20px;
+      }
+    }
+    padding-bottom: 72px;
+  }
+}
